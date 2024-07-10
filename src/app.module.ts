@@ -14,6 +14,8 @@ import { Quiz } from './modules/quizzes/entities/quiz.entity';
 import { UserAminDetail } from './modules/user-amin_detail/entities/user-amin_detail.entity';
 import { UsersAdmin } from './modules/users-admin/entities/users-admin.entity';
 import { User } from './modules/users/entities/user.entity';
+import { QuizTypeModule } from './modules/quiz_type/quiz_type.module';
+import { QuizType } from './modules/quiz_type/entities/quiz_type.entity';
 
 @Module({
   imports: [
@@ -24,11 +26,12 @@ import { User } from './modules/users/entities/user.entity';
       username: 'root',
       password: 'rrMbTslEWPcXlcNRVDEseFwTRlLlDVOO',
       database: 'railway',
-      entities: [QuizDetail, Quiz, UserDetail, UserAminDetail, User, UsersAdmin],
+      entities: [QuizDetail, Quiz, QuizType,UserDetail, UserAminDetail, User, UsersAdmin],
       synchronize: true,
     }),
     QuizDetailsModule,
     QuizzesModule,
+    QuizTypeModule,
     UserDetailModule,
     UserAminDetailModule,
     UsersModule,
